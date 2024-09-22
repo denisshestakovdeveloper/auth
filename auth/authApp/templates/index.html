@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Авторизация</title>
+</head>
+<body>
+<h1>Результат: {{ result }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ auth_user_form.as_p }}
+        <input type="submit" value="Авторизоваться">
+    </form>
+
+    <a href="{% url 'signup' %}">Зарегистрироваться</a>
+</body>
+</html>
